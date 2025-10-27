@@ -223,8 +223,8 @@ rmse_plot <- ggplot(plot_data[plot_data$Type == "RMSE", ], aes(x = Trees, y = Va
   ) +
   theme_minimal() +
   theme(
-    plot.title = element_text(size = 14, face = "bold"),
-    plot.subtitle = element_text(size = 12),
+    plot.title = element_text(size = 11, face = "bold"),
+    plot.subtitle = element_text(size = 9),
     legend.position = "bottom",
     axis.text = element_text(size = 10),
     axis.title = element_text(size = 11)
@@ -245,8 +245,8 @@ r2_plot <- ggplot(plot_data[plot_data$Type == "R_squared", ], aes(x = Trees, y =
   ) +
   theme_minimal() +
   theme(
-    plot.title = element_text(size = 14, face = "bold"),
-    plot.subtitle = element_text(size = 12),
+    plot.title = element_text(size = 11, face = "bold"),
+    plot.subtitle = element_text(size = 9),
     axis.text = element_text(size = 10),
     axis.title = element_text(size = 11)
   ) +
@@ -355,6 +355,7 @@ rf_rmse_train <- c(rmse_1_train, rmse_5_train, rmse_25_train, rmse_100_train,
 rf_rmse_test <- c(rmse_1_test, rmse_5_test, rmse_25_test, rmse_100_test, 
                   rmse_500_test, rmse_1000_test, rmse_2000_test, rmse_5000_test)
 
+
 rf_data <- data.frame(
   Complexity = rep(rf_trees, 2),
   RMSE = c(rf_rmse_train, rf_rmse_test),
@@ -378,8 +379,8 @@ dt_plot <- ggplot(dt_data, aes(x = Complexity, y = RMSE, color = Data_Type)) +
   ) +
   theme_minimal() +
   theme(
-    plot.title = element_text(size = 14, face = "bold"),
-    plot.subtitle = element_text(size = 12),
+    plot.title = element_text(size = 11, face = "bold"),
+    plot.subtitle = element_text(size = 9),
     legend.position = "bottom",
     axis.text = element_text(size = 10),
     axis.title = element_text(size = 11)
@@ -401,8 +402,8 @@ rf_plot <- ggplot(rf_data, aes(x = Complexity, y = RMSE, color = Data_Type)) +
   ) +
   theme_minimal() +
   theme(
-    plot.title = element_text(size = 14, face = "bold"),
-    plot.subtitle = element_text(size = 12),
+    plot.title = element_text(size = 11, face = "bold"),
+    plot.subtitle = element_text(size = 9),
     legend.position = "bottom",
     axis.text = element_text(size = 10),
     axis.title = element_text(size = 11)
@@ -524,8 +525,8 @@ rmse_plot <- ggplot(viz_data, aes(x = Model, y = RMSE, fill = Model)) +
   ) +
   theme_minimal() +
   theme(
-    plot.title = element_text(size = 14, face = "bold"),
-    plot.subtitle = element_text(size = 12),
+    plot.title = element_text(size = 11, face = "bold"),
+    plot.subtitle = element_text(size = 9),
     axis.text.x = element_text(angle = 45, hjust = 1),
     legend.position = "none"
   ) +
@@ -544,8 +545,8 @@ r2_plot <- ggplot(viz_data, aes(x = Model, y = R_squared, fill = Model)) +
   ) +
   theme_minimal() +
   theme(
-    plot.title = element_text(size = 14, face = "bold"),
-    plot.subtitle = element_text(size = 12),
+    plot.title = element_text(size = 11, face = "bold"),
+    plot.subtitle = element_text(size = 9),
     axis.text.x = element_text(angle = 45, hjust = 1),
     legend.position = "none"
   ) +
